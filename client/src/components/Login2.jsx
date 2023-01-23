@@ -133,11 +133,11 @@ const Login2=()=>{
             
             
               
-              (<button type="button" onClick={handleWithdrawFundedAmount} className="text-white w-full mt-2 border-[1px] rounded-full p-2 border-[#425585] cursor-pointer"> 
+              <button type="button" onClick={handleWithdrawFundedAmount} className="text-white w-full mt-2 border-[1px] rounded-full p-2 border-[#425585] cursor-pointer"> 
                WITHDRAW FUNDED AMOUNT
 
 
-              </button>)
+              </button>
 
             
 
