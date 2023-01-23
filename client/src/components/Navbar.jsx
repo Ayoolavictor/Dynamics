@@ -1,14 +1,14 @@
 import {useState} from "react";
 import {HiMenuAlt4} from 'react-icons/hi';
 import {AiOutlineClose} from 'react-icons/ai';
-import { BrowserRouter, Route, Link } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 import logo from '../../images/dynamics.png'
+//Navigation bar components 
+//Function that handles the props for the Nav item 
 const NavItem=({title,classProps})=>{
     return(
         <li className={`mx-4 cursor-pointer ${classProps}`}>
             {title}
-        
         </li>
     )
 };
@@ -25,12 +25,11 @@ const Navbar=()=>{
             <ul className='text-white md:flex hidden list-none flex-row justify-between items-center flex-initial '>
                 {[<Link to="/Home">Home</Link>,<Link to="/Transactions">Transactions</Link>,<Link to="/About">About</Link>].map((item,index)=>(
                     <NavItem key={item+index} title={item}/>
-                    
-                ))}
+                 ))}
                 <li className='bg-[#636c98] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#606fbe]'><Link to="/Login">REQUEST FOR A LOAN</Link></li>
                 <li className="bg-[#636c98] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#606fbe]"><Link to="/Login2">REPAY BACK A LOAN</Link></li>
             </ul>
-                <div className="flex relative">
+            <div className="flex relative">
                     {toggleMenu? <AiOutlineClose fontSize={28} className='text-white md:hidden cursor-pointer' onClick={()=>setToggleMenu(false)}/>:
                     <HiMenuAlt4 fontSize={28} className='text-white md:hidden cursor-pointer' onClick={()=>setToggleMenu(true)}/>}
                     {toggleMenu &&(
@@ -46,10 +45,6 @@ const Navbar=()=>{
 
                             <li className='bg-[#636c98] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#606fbe]'><Link to="/Login">REQUEST FOR A LOAN</Link></li>
                             <li className="bg-[#636c98] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#606fbe]"><Link to="/Login2">REPAY BACK A LOAN</Link></li>
-                            
-
-
-
 
                         </ul>
 
@@ -58,10 +53,6 @@ const Navbar=()=>{
 
 
                 </div>
-
-
-            
-
 
         </nav>
 

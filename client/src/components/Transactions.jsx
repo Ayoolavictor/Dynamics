@@ -1,6 +1,7 @@
 import React,{useContext} from "react";
 import {P2PLENDINGcontext} from "../context/P2PLENDINGcontext"
 import { shortenAddress } from "../utils/shortenAddress";
+//Function that handles the transaction card props
 const TransactionCard=({borrower,requestedAmount,collateralAmount,repaymentInstallment,returnAmount,dateLoanPaid})=>{
     return (
     <div className="bg-[#181918] m-4 flex flex-1
@@ -36,6 +37,7 @@ const TransactionCard=({borrower,requestedAmount,collateralAmount,repaymentInsta
     
 }
 
+//Main transaction component that handles the transaction page
 const Transactions=()=>{
     const {currentAccount,transactions}= useContext(P2PLENDINGcontext);
     return(

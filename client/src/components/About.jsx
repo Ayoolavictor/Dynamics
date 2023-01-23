@@ -1,5 +1,5 @@
 import React from 'react'
-
+//About component of the front end 
 const About = () => {
   return (
     <div className='w-full grid justify-items-center items-center '>
@@ -17,13 +17,8 @@ const About = () => {
           *Borrowers can apply for credits which will be sent to their address after the lenders have voted.<br/>
           *Borrowers can lose their collateral or part of it if they default on payments
 
- 
-
-
         </div>
         
-        
-
 
     </div>
   )

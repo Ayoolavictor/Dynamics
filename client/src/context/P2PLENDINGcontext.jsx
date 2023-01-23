@@ -5,15 +5,16 @@ import{contractABI,contractAddress} from "../utils/constants";
 export const P2PLENDINGcontext=React.createContext();
 const {ethereum} =window;
 
+//Function to get smart contract 
 const getEthereumContract=()=>{
     const provider=new ethers.providers.Web3Provider(ethereum);
     const signer=provider.getSigner();
     const p2plendingContract=new ethers.Contract(contractAddress,contractABI,signer);
-    
     return p2plendingContract;
 }
 
 export const P2PLENDINGProvider=({children})=>{
+    //Different states use in the front end that needs to be updated 
     const [currentAccount,setCurrentAccount] = useState('')
     const[formData, setFormData]=useState({requestedAmount:"",collateralAmount:"",requestedNumberRepayment:"",dateLoanPaid:"",lendersdeposit:""});
     const [isLoading, setIsLoading] = useState(false);
@@ -22,7 +23,7 @@ export const P2PLENDINGProvider=({children})=>{
     };
     const [transactions, setTransaction] = useState([])
 
-    
+    //Function to check if a wallet is connected 
     const checkIfWalletIsConnected=async()=>{
         try {
             if (!ethereum) return alert("Please Install Metamask");
@@ -43,10 +44,8 @@ export const P2PLENDINGProvider=({children})=>{
             
         }
         
-        
-
     }
-
+   // Function to connect wallet 
     const connectWallet=async()=>{
         try {
              if (!ethereum) return alert("Please Install Metamask");
@@ -62,6 +61,7 @@ export const P2PLENDINGProvider=({children})=>{
 
 
     }
+    //Function that would be used to apply for loan
     const applyForLoan=async()=>{
         try { 
             if (!ethereum) return alert("Please Install Metamask");
@@ -91,6 +91,8 @@ export const P2PLENDINGProvider=({children})=>{
 
 
     };
+
+    //Function that will be used to deposit collateral
     const borrowersCollateral=async()=>{
         try { 
             if (!ethereum) return alert("Please Install Metamask");
@@ -113,11 +115,8 @@ export const P2PLENDINGProvider=({children})=>{
             
         }
 
-
-
-
-
     }
+    //Function that would be used by the borrower to withdraw loan
     const withdraw=async()=>{
         try {
             if (!ethereum) return alert("Please Install Metamask");
@@ -140,6 +139,7 @@ export const P2PLENDINGProvider=({children})=>{
 
 
     };
+    //Function that will be used by the lenders to invest 
     const invest=async()=>{
         try {
             if (!ethereum) return alert("Please Install Metamask");
@@ -165,7 +165,7 @@ export const P2PLENDINGProvider=({children})=>{
 
     };
     
-
+    //Function that will be used by the borrower to repay the loan installmentally 
     const repay=async()=>{
         try {
             if (!ethereum) return alert("Please Install Metamask");
@@ -197,6 +197,7 @@ export const P2PLENDINGProvider=({children})=>{
 
 
     };
+    //Function that will be used by the borrower to get their collateral back after loan repayment 
     const refundCollateral=async()=>{
         try {
             if (!ethereum) return alert("Please Install Metamask");
@@ -221,6 +222,7 @@ export const P2PLENDINGProvider=({children})=>{
 
 
     };
+    //Function that will be used by the borrower to withdraw extra collateral when it is defaulted 
     const refundCollateralAfterDefault=async()=>{
         try {
             if (!ethereum) return alert("Please Install Metamask");
@@ -233,8 +235,6 @@ export const P2PLENDINGProvider=({children})=>{
             setIsLoading(false);
             console.log(`Success- ${transactionHash.hash}`);
 
-            
-            
         } catch (error) {
 
             console.log(error);
@@ -245,6 +245,7 @@ export const P2PLENDINGProvider=({children})=>{
 
 
     };
+    //Function used by the lender to withdraw interest 
     const requestInterest=async()=>{
         try {
             if (!ethereum) return alert("Please Install Metamask");
@@ -268,6 +269,7 @@ export const P2PLENDINGProvider=({children})=>{
 
 
     }
+    //Function that will be used by the lenders to withdraw original investment 
     const refundFundDeposited=async()=>{
         try {
             if (!ethereum) return alert("Please Install Metamask");
@@ -293,7 +295,7 @@ export const P2PLENDINGProvider=({children})=>{
 
     };
    
-
+   // Function that will be used to get the transaction info 
     const getTransactionInfo=async()=>{
         try {
             if (!ethereum) return alert("Please Install Metamask");
@@ -310,25 +312,19 @@ export const P2PLENDINGProvider=({children})=>{
 
             }))
             console.log(structuredTransaction);
-            setTransaction(structuredTransaction);
-            
-                
-
-            
-            
-            
+            setTransaction(structuredTransaction); 
             
         } catch (error) {
             console.log(error);
             throw new Error("No ethereum object.");
-
-            
+  
         }
        
 
 
 
     }
+    //Function that will be used to get specific variables stored in the contract
     const getCreditInfo=async()=>{
 
         try { 
@@ -349,6 +345,7 @@ export const P2PLENDINGProvider=({children})=>{
 
     }
 
+    //Use effect hook 
     useEffect(()=>{
         checkIfWalletIsConnected();}, [])
     return(

@@ -1,18 +1,12 @@
 import React, {useContext} from "react";
 import { P2PLENDINGcontext } from "../context/P2PLENDINGcontext";
-
-
 const commonStyles="min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border-gray-400 text-sm font-light text-white";
 
-
+// Main Landing page component 
 const Welcome=()=>{
     const {connectWallet,currentAccount}=useContext(P2PLENDINGcontext);
 
     return(
-        
-            
-        
-        
         <div className="flex w-full justify-center items-center">
             <div className="flex md:flex-row flex-col items-start justify-between md:p-20 py-12 px-4">
                 <div className="flex flex-1 justify-start flex-col md:mr-10">

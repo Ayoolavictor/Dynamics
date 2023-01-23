@@ -1,9 +1,7 @@
 import {Welcome,Layout,Login,Login2,Transactions,About} from "./components"
 import {
-  BrowserRouter as Router,
   Route,
   Routes,
-  Link,
   BrowserRouter
 } from 'react-router-dom';
 const App =() =>{
