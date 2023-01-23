@@ -1,2 +1,2 @@
-# Dynamics-
+# Dynamics
 Lending and saving DApp
