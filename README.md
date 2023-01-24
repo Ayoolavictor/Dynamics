@@ -27,7 +27,7 @@ payment</p> <br>
 
 ## How to install/ Run the product <br>
 
-<p>1. Navigate to the client folder and install the needed dependencies using npm start  </p>
+<p>1. Navigate to the client folder and install the needed dependencies using npm install  </p>
 <p>2. Navigate the smart contract folder, compile and deploy the smart contracts using hardhat compile </p>
 <p>3. Deploy contracts using npx hardhar run scripts/deploy.js --network goerli </p>
 <p>4. Navigate back to the client app and use npm run dev to run the react app </p>
