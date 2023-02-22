@@ -33,7 +33,7 @@ payment</p> <br>
 <p>4. Navigate back to the client app and use npm run dev to run the react app </p>
 <p>5. Make sure you get an Api key from Alchemy or Quicknode and also input a contract address in the hardhat.config.js file </p>
 <p>6. Time is in UNIX format for the lending and savings app so you can use a UNIX converter to convert your time to the UNIX time.</p>
-<p>7. Minimum deposit must be over 0.001 ETH </p> <br>
+<p>7. Minimum deposit for lenders must be over 0.001 ETH </p> <br>
 
 ## License <br>
 <p> MIT </p>
