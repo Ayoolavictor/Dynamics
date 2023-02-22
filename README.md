@@ -32,7 +32,8 @@ payment</p> <br>
 <p>3. Deploy contracts using npx hardhar run scripts/deploy.js --network goerli </p>
 <p>4. Navigate back to the client app and use npm run dev to run the react app </p>
 <p>5. Make sure you get an Api key from Alchemy or Quicknode and also input a contract address in the hardhat.config.js file </p>
-<p>6. Time is in UNIX format for the lending and savings app so you can use a UNIX converter to convert your time to the UNIX time.</p> </br>
+<p>6. Time is in UNIX format for the lending and savings app so you can use a UNIX converter to convert your time to the UNIX time.</p>
+<p>7. Minimum deposit for a lender is 0.0011ETH <p><br>
 
 ## License <br>
 <p> MIT </p>
