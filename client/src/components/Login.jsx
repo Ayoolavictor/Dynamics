@@ -78,7 +78,7 @@ const Login=()=>{
                 <Input placeholder="Requested Amount" name="requestedAmount" type="number" handleChange={handleChange} />
                 <Input placeholder="Collateral Amount" name="collateralAmount" type="number" handleChange={handleChange} />
                 <Input placeholder="Requested Number of installment" name="requestedNumberRepayment" type="number" handleChange={handleChange} />
-                <Input placeholder="Date Loan would be paid" name="dateLoanPaid" type="number" handleChange={handleChange} />
+                <Input placeholder="Date Loan would be paid(YYYY-MM-DD)" name="dateLoanPaid" type="string" handleChange={handleChange} />
                 <div className="h-[1px] w-full bg-gray-400 my-2"/>
                 
                 <button type="button" onClick={handleSubmit} className="text-white w-full mt-2 border-[1px] rounded-full p-2 border-[#425585] cursor-pointer"> 

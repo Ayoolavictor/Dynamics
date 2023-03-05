@@ -209,7 +209,6 @@ contract P2PLENDING is Ownable{
   
   // Function which which will enable the lenders to invest there crypto for the requested loan to be serviced
   function invest() public isActive canInvest payable{
-    require (msg.value>1000000000000000);
     lenders[msg.sender]=true;
     lendersCount++;
     lendersInvestedAmount[msg.sender]=lendersInvestedAmount[msg.sender].add(msg.value);

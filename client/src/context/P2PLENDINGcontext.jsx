@@ -70,7 +70,9 @@ export const P2PLENDINGProvider=({children})=>{
             const parsedAmount=ethers.utils.parseEther(requestedAmount);
             const parsedCollateralAmount=ethers.utils.parseEther(collateralAmount);
             const parsedRequestedAmount=ethers.utils.parseUnits(requestedNumberRepayment,0);
-            const parsedDateLoanPaid=ethers.utils.parseUnits(dateLoanPaid,0)
+            const DateLoanPaid=new Date(dateLoanPaid);
+            const parsedDateLoanPaid = Math.floor(DateLoanPaid.getTime() / 1000);
+           
             
             const transactionHash=await p2plendingContract.applyForLoan(parsedCollateralAmount, parsedAmount,parsedRequestedAmount,parsedDateLoanPaid);
             setIsLoading(true);
