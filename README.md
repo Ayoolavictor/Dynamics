@@ -32,8 +32,9 @@ payment</p> <br>
 <p>3. Deploy contracts using npx hardhar run scripts/deploy.js --network goerli </p>
 <p>4. Navigate back to the client app and use npm run dev to run the react app </p>
 <p>5. Make sure you get an Api key from Alchemy or Quicknode and also input a contract address in the hardhat.config.js file </p>
-<p>6. Time is in UNIX format for the lending and savings app so you can use a UNIX converter to convert your time to the UNIX time.</p>
-<p>7. Minimum deposit for lenders must be over 0.001 ETH </p> <br>
+<p>6. This projects is live on vercel and can be accessed there without installing locally </p>
+<p>7. The Navigations are APPLY FOR LOAN(Borrower) -> DEPOSIT COLLATERAL(Borrower) -> DEPOSIT LENDING AMOUNT(lender)-> WITHDRAW LOAN(borrower) -> PAY BACK LOAN(borrower) -> WITHDRAW COLLATERAL (borrower) -> WITHDRAW INTEREST (lender) -> WITHDRAW FUNDED AMOUNT(lender) </p>
+<p>8. If the borrower defaults on the loan the borrower would be able to withdraw is remaining collateral when the amout owed has been deducted through the WITHDRAW AFTER DEFAULT BUTTON(borrower) and the whole process continues </P> <br>
 
 ## License <br>
 <p> MIT </p>
