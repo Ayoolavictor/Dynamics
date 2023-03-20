@@ -162,6 +162,7 @@ contract P2PLENDING is Ownable{
 
   //This function is used to apply for loans and also it will take in important variables and initialize them
   function applyForLoan(uint _collateralAmount, uint _requestedAmount, uint _requestedNumberRepayment,uint _dateLoanPaid)public{
+    require(_dateLoanPaid>block.timestamp,"Input a valid date");
     // this is to make sure the account that triggers this function is marked as the borrower
     borrower=msg.sender;
     // Initializes the amount of collateral that would be deposited by the borrower
