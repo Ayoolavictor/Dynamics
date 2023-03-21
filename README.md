@@ -1,5 +1,5 @@
 # DYNAMICS
-## Lending and saving DApp built on ethereun using solidity and react.
+## Lending and saving DApp built on ethereum using solidity and react.
 <br>
 
 ## Project Description <br>
