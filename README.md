@@ -17,6 +17,10 @@ payment</p> <br>
 
 <p>https://dynamics-bxqt.vercel.app/ </p> <br>
 
+## Verified Goerli Deployed Contract <br>
+
+<p>https://goerli.etherscan.io/address/0x962D28961D2D9b57fCe5256C37aFBD81f1a07219#code</p> <br>
+
 ## Acknowledgments <br>
 
 <li>Milen Radkov - milenradkov@me.com </li>
